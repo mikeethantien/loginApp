@@ -1,0 +1,33 @@
+<div class="content" ng-controller="formController">
+  <div class="panel panel-primary" ng-show="success">
+    <div class="panel-heading">Welcome!</div>
+    <div class="panel-body">
+      <div class="alert alert-success" role="alert">
+        <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+        <strong>{{message}}</strong>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-primary" ng-hide="success">
+    <div class="panel-heading">Login</div>
+    <div class="panel-body">
+      <div class="alert alert-danger" role="alert" ng-show="error">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <strong>{{message}}</strong>
+      </div>
+      <form name="loginForm" novalidate>
+        <div class="form-group" ng-class="{'has-error': loginForm.email.$invalid && !loginForm.email.$pristine}">
+          <label for="email">Email:</label>
+          <input type="email" name="email" class="form-control" ng-model="email" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required>
+          <p ng-show="loginForm.email.$invalid && !loginForm.email.$pristine" class="help-block">Please enter a valid email.</p>
+        </div>
+        <div class="form-group" ng-class="{'has-error': loginForm.password.$invalid && !loginForm.password.$pristine}">
+          <label for="password">Password</label>
+          <input type="password" name="password" class="form-control" ng-model="password" ng-minlength="8" required>
+          <p ng-show="loginForm.password.$invalid && !loginForm.password.$pristine" class="help-block">The password needs to contain at least 8 characters.</p>
+        </div>
+        <button type="submit" class="btn btn-primary btn-login" ng-click="submit()" ng-disabled="loginForm.$invalid">Log in</button>
+      </form>
+    </div>
+  </div>
+</div>
