@@ -8,7 +8,7 @@ This Angular application is being hosted using **node** so please make sure **no
 2. Open a new terminal and cd into the directory where the project has been unzipped.
 3. Execute **npm install** to make sure all the dependencies have been installed (all the dependencies should be stored under **/node_modules** already).
 4. Execute **node app/app.js**.
-5. Open up any browser and enter **localhost:8080** in the address bar.
+5. Open up any browser and enter **localhost:8080** in the address bar (make sure you don't have another server running on localhost:8080).
 6. The loginApp should be loaded successfully.
 
 ## Running the Jasmine unit test using Karma
