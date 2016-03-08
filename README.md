@@ -1,4 +1,4 @@
-# loginApp Demo
+# Login App Demo
 
 ## Prerequisites
 This Angular application is being hosted using **node** so please make sure **node.js** has been installed before you can run the appication. See [How to install node.js](https://nodejs.org/en/download/package-manager/).
